@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/genesis-front-end-school/static/css/main.c3d5249d.css",
+    "main.js": "/genesis-front-end-school/static/js/main.8b525287.js",
+    "static/js/475.8b317777.chunk.js": "/genesis-front-end-school/static/js/475.8b317777.chunk.js",
+    "static/js/103.fa4741e1.chunk.js": "/genesis-front-end-school/static/js/103.fa4741e1.chunk.js",
+    "static/js/487.e935a37a.chunk.js": "/genesis-front-end-school/static/js/487.e935a37a.chunk.js",
+    "index.html": "/genesis-front-end-school/index.html",
+    "main.c3d5249d.css.map": "/genesis-front-end-school/static/css/main.c3d5249d.css.map",
+    "main.8b525287.js.map": "/genesis-front-end-school/static/js/main.8b525287.js.map",
+    "475.8b317777.chunk.js.map": "/genesis-front-end-school/static/js/475.8b317777.chunk.js.map",
+    "103.fa4741e1.chunk.js.map": "/genesis-front-end-school/static/js/103.fa4741e1.chunk.js.map",
+    "487.e935a37a.chunk.js.map": "/genesis-front-end-school/static/js/487.e935a37a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3d5249d.css",
+    "static/js/main.8b525287.js"
+  ]
+}

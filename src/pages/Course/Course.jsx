@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player';
 import { useParams } from 'react-router-dom';
 import { getCourseById } from 'services/coursesApi';
 
@@ -45,15 +44,8 @@ export default function Course() {
         autoPlay
         controls
         poster={`${course.previewImageLink}/cover.webp`}
-        src={
-          'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
-        }
-        // src={meta.courseVideoPreview?.link}
-      >
-        <source src={course.meta.courseVideoPreview?.link} type="video/mp4" />
-        <source src={course.meta.courseVideoPreview?.link} type="video/m3u" />
-        <source src={course.meta.courseVideoPreview?.link} type="video/ogg" />
-      </video>
+        src={course.meta.courseVideoPreview?.link}
+      ></video>
     </div>
   );
 }

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgenesis_front_end_school=self.webpackChunkgenesis_front_end_school||[]).push([[475],{475:function(e,n,s){s.r(n),s.d(n,{default:function(){return u}});s(791);var r=s(184);function u(){return(0,r.jsx)("div",{children:"Courses page"})}}}]);
-//# sourceMappingURL=475.8b317777.chunk.js.map

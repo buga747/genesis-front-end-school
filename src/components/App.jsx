@@ -13,7 +13,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Courses />} />
-            <Route path="/course/:name" element={<Course />} />
+            <Route path="/course/:courseId" element={<Course />} />
           </Route>
         </Routes>
         <GlobalStyle />

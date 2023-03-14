@@ -8,7 +8,7 @@ export default function SharedLayout() {
       <Header>
         <nav>
           <Link to="/">Courses</Link>
-          <Link to="/course/:name">Course</Link>
+          <Link to="/course/:id">Course</Link>
         </nav>
       </Header>
       <main>

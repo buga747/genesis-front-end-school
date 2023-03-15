@@ -1,5 +1,6 @@
+import CoursesList from 'components/CoursesList/CoursesList';
+import MainTitle from 'components/MainTitle/MainTitle';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { getCourses } from 'services/coursesApi';
 
 export default function Course() {
@@ -33,25 +34,8 @@ export default function Course() {
 
   return (
     <div>
-      <h1>List of Courses</h1>
-      <ul>
-        {courses.map(({ previewImageLink, id, title }) => (
-          <Link key={id} to={`/course/${id}`}>
-            <li>
-              <img
-                style={{
-                  height: '240px',
-                  objectFit: 'cover',
-                  // width: 'auto',
-                }}
-                src={previewImageLink + '/cover.webp'}
-                alt=""
-              />
-              <p> {title}</p>
-            </li>
-          </Link>
-        ))}
-      </ul>
+      <MainTitle title="Courses" />
+      <CoursesList courses={courses} />
     </div>
   );
 }

@@ -65,6 +65,7 @@ export const CourseDetails = styled.div`
     font-size: 18px;
     font-weight: 400;
     margin-right: 20px;
+    margin-top: 0;
   }
 
   ul {
@@ -90,5 +91,9 @@ export const CourseDetails = styled.div`
     background-color: #2196f3;
     color: white;
     cursor: pointer;
+  }
+
+  div {
+    display: flex;
   }
 `;

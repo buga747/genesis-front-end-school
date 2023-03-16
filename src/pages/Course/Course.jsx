@@ -1,3 +1,4 @@
+import CourseItem from 'components/CourseItem';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCourseById } from 'services/coursesApi';
@@ -38,14 +39,7 @@ export default function Course() {
 
   return (
     <div>
-      <p>{course.title}</p>
-      <video
-        width="500"
-        autoPlay
-        controls
-        poster={`${course.previewImageLink}/cover.webp`}
-        src={course.meta.courseVideoPreview?.link}
-      ></video>
+      <CourseItem course={course} />
     </div>
   );
 }

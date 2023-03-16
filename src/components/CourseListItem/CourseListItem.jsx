@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   CourseDetails,
   CourseImage,
@@ -9,6 +10,7 @@ import {
 
 export default function CourseListItem({ course }) {
   const [hovered, setHovered] = useState(false);
+  const location = useLocation();
 
   const {
     id,
@@ -27,6 +29,8 @@ export default function CourseListItem({ course }) {
   const handleLeave = () => {
     setHovered(false);
   };
+
+  const currentPage = new URLSearchParams(location.search).get('page');
 
   return (
     <>
@@ -49,18 +53,29 @@ export default function CourseListItem({ course }) {
           )}
         </PhotoWrapper>
         <CourseDetails>
-          <List to={`/course/${id}`}>
+          <List
+            to={{
+              pathname: `/course/${id}`,
+              state: { from: location, page: currentPage },
+            }}
+          >
             <h2>Course name: {title}</h2>
           </List>
 
           <p>Lessons: {lessonsCount}</p>
           <p>Course rating: {rating}</p>
-          <p> Skills:</p>
-          <ul>
-            {skills.map((skill, idx) => {
-              return <li key={idx}>{skill}</li>;
-            })}
-          </ul>
+          <div>
+            <p> Skills:</p>
+            {skills ? (
+              <ul>
+                {skills.map((skill, idx) => {
+                  return <li key={idx}>{skill}</li>;
+                })}
+              </ul>
+            ) : (
+              <p>Sorry, no information about skills</p>
+            )}
+          </div>
         </CourseDetails>
       </ListItem>
     </>

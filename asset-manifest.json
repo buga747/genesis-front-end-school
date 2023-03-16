@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/genesis-front-end-school/static/css/main.c3d5249d.css",
-    "main.js": "/genesis-front-end-school/static/js/main.538c63a4.js",
-    "static/js/959.8029d602.chunk.js": "/genesis-front-end-school/static/js/959.8029d602.chunk.js",
-    "static/js/103.22186389.chunk.js": "/genesis-front-end-school/static/js/103.22186389.chunk.js",
+    "main.js": "/genesis-front-end-school/static/js/main.37d67f71.js",
+    "static/js/230.a08d4282.chunk.js": "/genesis-front-end-school/static/js/230.a08d4282.chunk.js",
+    "static/js/806.e3df7c06.chunk.js": "/genesis-front-end-school/static/js/806.e3df7c06.chunk.js",
     "static/js/423.356d2ee0.chunk.js": "/genesis-front-end-school/static/js/423.356d2ee0.chunk.js",
     "static/js/487.b001f2c7.chunk.js": "/genesis-front-end-school/static/js/487.b001f2c7.chunk.js",
     "static/js/279.68c4e738.chunk.js": "/genesis-front-end-school/static/js/279.68c4e738.chunk.js",
     "index.html": "/genesis-front-end-school/index.html",
     "main.c3d5249d.css.map": "/genesis-front-end-school/static/css/main.c3d5249d.css.map",
-    "main.538c63a4.js.map": "/genesis-front-end-school/static/js/main.538c63a4.js.map",
-    "959.8029d602.chunk.js.map": "/genesis-front-end-school/static/js/959.8029d602.chunk.js.map",
-    "103.22186389.chunk.js.map": "/genesis-front-end-school/static/js/103.22186389.chunk.js.map",
+    "main.37d67f71.js.map": "/genesis-front-end-school/static/js/main.37d67f71.js.map",
+    "230.a08d4282.chunk.js.map": "/genesis-front-end-school/static/js/230.a08d4282.chunk.js.map",
+    "806.e3df7c06.chunk.js.map": "/genesis-front-end-school/static/js/806.e3df7c06.chunk.js.map",
     "423.356d2ee0.chunk.js.map": "/genesis-front-end-school/static/js/423.356d2ee0.chunk.js.map",
     "487.b001f2c7.chunk.js.map": "/genesis-front-end-school/static/js/487.b001f2c7.chunk.js.map",
     "279.68c4e738.chunk.js.map": "/genesis-front-end-school/static/js/279.68c4e738.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.538c63a4.js"
+    "static/js/main.37d67f71.js"
   ]
 }

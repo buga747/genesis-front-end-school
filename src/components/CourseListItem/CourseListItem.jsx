@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import * as Hls from 'hls.js';
+import { useLocation, Link } from 'react-router-dom';
 import {
   CourseDetails,
   CourseImage,
-  List,
   ListItem,
   PhotoWrapper,
 } from './CourseListItem.styled';
 
 export default function CourseListItem({ course }) {
   const [hovered, setHovered] = useState(false);
+  const [videoSrc, setVideoSrc] = useState(null); // store video source link
   const location = useLocation();
+  const videoEl = useRef(null); // ref to the video element
 
   const {
     id,
@@ -20,7 +22,26 @@ export default function CourseListItem({ course }) {
     rating,
     meta: { courseVideoPreview, skills },
   } = course;
+
   const hasVideo = courseVideoPreview && courseVideoPreview.link !== undefined;
+
+  useEffect(() => {
+    if (!courseVideoPreview) {
+      return;
+    }
+
+    if (hasVideo) {
+      const hls = new Hls(); // create a new instance of hls.js player
+      hls.loadSource(courseVideoPreview.link); // load video source using HLS protocol
+      hls.attachMedia(videoEl.current); // attach video to the HTML5 video element via ref
+      setVideoSrc(courseVideoPreview.link); // update state to store the source link
+      return () => {
+        if (hls) {
+          hls.destroy(); // clean up the instance when unmounting
+        }
+      };
+    }
+  }, [courseVideoPreview, hasVideo]);
 
   const handleHover = () => {
     setHovered(true);
@@ -42,7 +63,8 @@ export default function CourseListItem({ course }) {
               autoPlay
               controls
               poster={`${previewImageLink}/cover.webp`}
-              src={courseVideoPreview?.link}
+              src={videoSrc}
+              ref={videoEl} // pass the ref to the video element
             ></video>
           ) : (
             <CourseImage
@@ -51,17 +73,16 @@ export default function CourseListItem({ course }) {
               alt="title"
             />
           )}
-        </PhotoWrapper>
+        </PhotoWrapper>{' '}
         <CourseDetails>
-          <List
+          <Link
             to={{
               pathname: `/course/${id}`,
               state: { from: location, page: currentPage },
             }}
           >
             <h2>Course name: {title}</h2>
-          </List>
-
+          </Link>
           <p>Lessons: {lessonsCount}</p>
           <p>Course rating: {rating}</p>
           <div>

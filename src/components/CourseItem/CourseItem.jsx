@@ -1,41 +1,13 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { useLocation, useNavigate } from 'react-router-dom';
+import {
+  StyledBackButton,
+  StyledCourseItemContainer,
+  StyledLessonsUl,
+  StyledVideoWrapper,
+} from './CourseItem.styled';
 
 // define a styled back button
-const StyledBackButton = styled.button`
-  border: none;
-  background-color: #fff;
-  padding: 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  &:hover {
-    background-color: #ccc;
-  }
-`;
-
-// define a styled ul that shows the lessons list with a default cursor pointer
-const StyledLessonsUl = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  li {
-    cursor: pointer;
-    &:hover {
-      color: #ccc;
-    }
-  }
-`;
-
-// define a styled video wrapper
-const StyledVideoWrapper = styled.div`
-  width: 100%;
-  margin-top: 20px;
-  video {
-    width: 100%;
-    height: auto;
-  }
-`;
 
 export default function CourseItem({
   course: {
@@ -67,7 +39,7 @@ export default function CourseItem({
   };
 
   return (
-    <div>
+    <StyledCourseItemContainer>
       <StyledBackButton onClick={handleGoBack}>Go back</StyledBackButton>
 
       {/* show course details */}
@@ -125,6 +97,6 @@ export default function CourseItem({
           <button onClick={() => setCurrentLesson(null)}>Close</button>
         </StyledVideoWrapper>
       )}
-    </div>
+    </StyledCourseItemContainer>
   );
 }
